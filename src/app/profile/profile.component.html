@@ -8,11 +8,11 @@
         <input
           type="radio"
           id="{{ 'radio_' + choice }}"
-          name="{{ groupName }}"
+          name="{{ choice }}"
           [value]="choice"
           [(ngModel)]="radio"
         />
-        <label class="toggle-button" for="{{ radio_ + choice }}">{{
+        <label class="toggle-button" for="{{ 'radio_' + choice }}">{{
           choice
         }}</label>
       </div>

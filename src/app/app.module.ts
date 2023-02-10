@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { messageReducer, profileReducer } from './store/reducers';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessageComponent } from './message/message.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [AppComponent, ProfileComponent, MessageComponent],
@@ -17,6 +18,7 @@ import { MessageComponent } from './message/message.component';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    StoreDevtoolsModule,
     StoreModule.forRoot({
       profileState: profileReducer,
       messageState: messageReducer,
