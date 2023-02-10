@@ -1,0 +1,32 @@
+<div class="container">
+  <br />
+  <span> Messages: </span>
+  <div *ngFor="let message of messages">
+    <div class="row">
+      <div class="col-2">
+        <p>Id: {{ message.id }}</p>
+      </div>
+      <div class="col-4">
+        <p>Completed: {{ message.title }}</p>
+      </div>
+      <div class="col-6">
+        <p>Title: {{ message.body }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="video">
+  <video
+    controls
+    (click)="toggleVideo()"
+    #videoPlayer
+
+  >
+    <source
+      src="https://strapi-dev2.s3.amazonaws.com/cn_reel_jan_2022_v4_mov_Original_c5bd5198ff.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+</div>

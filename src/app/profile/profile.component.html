@@ -1,0 +1,58 @@
+<div class="container">
+  <br />
+
+  <div class="row">
+    <div class="col-5">
+      <span>Please select userId</span>
+      <div *ngFor="let choice of choices" style="vertical-align: inherit;">
+        <input
+          type="radio"
+          id="{{ 'radio_' + choice }}"
+          name="{{ groupName }}"
+          [value]="choice"
+          [(ngModel)]="radio"
+        />
+        <label class="toggle-button" for="{{ radio_ + choice }}">{{
+          choice
+        }}</label>
+      </div>
+      <p>Selected Id: {{ radio }}</p>
+    </div>
+
+    <div class="col-2">
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="onClick()"
+        [disabled]="!radio"
+      >
+        Send
+      </button>
+    </div>
+    <div class="col-2">
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="reset()"
+        [disabled]="!radio"
+      >
+        Reset
+      </button>
+    </div>
+  </div>
+  <br />
+  <span> Profile: </span>
+  <div class="row">
+    <div class="col-2">
+      <p>Id: {{ user.id }}</p>
+    </div>
+    <div class="col-4">
+      <p>Completed: {{ user.completed }}</p>
+    </div>
+    <div class="col-6">
+      <p>Title: {{ user.title }}</p>
+    </div>
+  </div>
+</div>
+
+<hr />
